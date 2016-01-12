@@ -1,0 +1,38 @@
+<div >
+	
+<ul class="nav nav-pills">
+	<li class="dropdown" >
+	  <a class="dropdown-toggle"  href="#" data-toggle="dropdown">
+	    {{fromcurrency}}
+	    <span class="caret"></span>
+	  </a>
+	  <ul class="dropdown-menu">
+	    <li ng-repeat="item in currencies" >
+	      <a ng-click="selectFromCurrency(item)">{{item.currencyName}}</a>
+	    </li>
+	  </ul>
+	</li>
+	<li class="dropdown" >
+	  <a class="dropdown-toggle">
+	    {{tocurrency}}
+	    <span class="caret"></span>
+	  </a>
+	  <ul class="dropdown-menu">
+	    <li ng-repeat="item in currencies" >
+	      <a ng-click="selectToCurrency(item)">{{item.currencyName}}</a>
+	    </li>
+	  </ul>
+	</li>
+
+</ul>
+
+<label>{{fromcurrency}}:</label><input type="number" ng-model="fromcurrencyvalue" />
+<input type="button" class="btn btn-primary" value="Convert" ng-click="convert()" />
+<br />
+<label>Currency Rate:</label>{{rate}}
+<br />
+
+<label>{{fromcurrency}}:</label>{{fromcurrencyvalue}}
+<br />
+<label>{{tocurrency}}:</label>{{tocurrencyvalue}}
+</div>

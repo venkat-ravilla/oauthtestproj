@@ -1,0 +1,27 @@
+{"appenders" :[
+		{
+			"category":"app"
+			,"type":"logLevelFilter"
+			,"level":"INFO"
+			,"appender":{
+				"type":"multiprocess"
+				,"mode":"worker"
+				,"loggerPort":3005
+				,"loggerHost":"127.0.0.1"
+			}
+		}
+	   ,{
+			"category":"access"
+			,"type":"logLevelFilter"
+			,"level":"TRACE"
+			,"appender":{
+				"type":"multiprocess"
+				,"mode":"worker"
+				,"loggerPort":3006
+				,"loggerHost":"127.0.0.1"
+			}
+		
+		}
+	
+	]
+}

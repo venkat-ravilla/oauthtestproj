@@ -1,0 +1,57 @@
+<div >
+	<div>
+		<label>{{username}}</label>
+		<button class="btn" ng-click="open()">Add User</button>
+		<div modal="shouldBeOpen" close="close()" options="opts">
+	        <div class="modal-header">
+	            <h3>User Authentication</h3>
+	        </div>
+	        <div class="modal-body">
+	            Enter your display name for your account:
+	            <input type="text" class="searchinput" style="width: 200px;"  ng-model="username" />
+	        </div>
+	        <div class="modal-footer">
+	            <button class="btn btn-warning cancel" ng-click="close()">Cancel</button>
+	            <button class="btn btn-warning cancel" ng-click="authorize()">Authorize</button>
+	        </div>
+	    </div>
+	</div>
+    <div class="thumbnaildiv playlistwidth floatleft">
+    	<h5>Play Lists</h5> 
+    	<ul class="thumbnails playlistheight">
+    		<li ng-repeat="item in playlists">
+    			<div class="thumbnail floatleft">
+						<div class="floatleft">
+							<img src="{{item.snippet.thumbnails.default.url}}" ng-click="getplaylistvedio(item)" style="width: 100px;height: 100px;" alt="">
+						</div>
+						
+						<div class="caption floatleft" style="width: 200px;height: 100px;">
+							<b>{{item.snippet.title}}</b>
+						</div>
+					</div>
+    		</li>
+    	</ul>
+    </div>
+    <div class="thumbnaildiv playlistwidth floatleft">
+    	<h5>Vedios of <b>{{selectedPlayList.snippet.title}}</b></h5> 
+    	<ul class="thumbnails playlistheight">
+    		<li ng-repeat="item in playlistItems">
+    			<div class="thumbnail floatleft">
+						<div class="floatleft">
+							<img src="{{item.snippet.thumbnails.default.url}}" ng-click="playvedio(item)" style="width: 100px;height: 100px;" alt="">
+						</div>
+						
+						<div class="caption floatleft" style="width: 200px;height: 100px;">
+							<b>{{item.snippet.title}}</b>
+						</div>
+					</div>
+    		</li>
+    	</ul>
+    	
+    </div>
+    <div>
+    	<iframe type="text/html" style="width: 550px;height: 400px;padding: 5px;margin-top: 5px;" src="{{videosource}}" frameborder="0"></iframe>
+    </div>
+</div>
+
+

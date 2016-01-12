@@ -1,0 +1,37 @@
+{"appenders" :[
+		{
+			"category":"app"
+			,"type":"logLevelFilter"
+			,"level":"INFO"
+			,"appender":{
+				"type":"multiprocess"
+				,"mode":"master"
+				,"loggerPort":3005
+				,"loggerHost":"127.0.0.1"
+				,"appender":{
+					"type":"dateFile"
+					,"filename":"log/node-serverlog/node-server.log"
+					,"pattern":"-yyyy-MM-dd"
+				}
+			}
+		}
+	   ,{
+			"category":"access"
+			,"type":"logLevelFilter"
+			,"level":"TRACE"
+			,"appender":{
+				"type":"multiprocess"
+				,"mode":"master"
+				,"loggerPort":3006
+				,"loggerHost":"127.0.0.1"
+				,"appender":{
+					"type":"dateFile"
+					,"filename":"log/accesslog/access.log"
+					,"pattern":"-yyyy-MM-dd"
+				}
+			}
+		
+		}
+	
+	]
+}

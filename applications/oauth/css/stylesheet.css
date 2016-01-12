@@ -1,0 +1,73 @@
+body {
+	
+}
+
+.rootapp{
+	margin: 10px;
+}
+
+.navcontainer{
+	width: 100%;
+}
+
+.boundary{
+	background-color: #FFFFFF;
+    border-color: #DDDDDD;
+    border-style:solid;
+    border-radius: 4px;
+    border-width: 1px;
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.blockcontainer{
+	background-color: #F9F9F9;
+    border: 1px solid #E5E5E5;
+    border-radius: 4px 4px 4px 4px;
+	width:30%;
+	height:120px;
+	margin-bottom:3%;
+	margin-right:3%;
+}
+
+.blockcontainer.fit{
+	margin-left:0;
+	margin-right:0;
+}
+
+.block{
+	
+    margin: 0 0 20px;
+    padding: 20px;
+    clear:both;
+}
+
+.block-title h3{
+	display: block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 23px;
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: left;
+}
+
+.block-content{
+	display: block;
+    line-height: 1.5em;
+    margin: 0;
+    word-wrap: break-word;
+}    
+    
+.full-width{
+	width: 100%;
+}
+
+.floatleft{
+	float: left;
+}
+
+.clearboth{
+	clear: both;
+}
